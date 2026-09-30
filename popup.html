@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>成电课程播放助手</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup-shell">
+      <header class="header">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <path d="M5 4.75A2.75 2.75 0 0 1 7.75 2h8.5A2.75 2.75 0 0 1 19 4.75v14.5A2.75 2.75 0 0 1 16.25 22h-8.5A2.75 2.75 0 0 1 5 19.25V4.75Z" />
+            <path d="m10 8.5 5 3.5-5 3.5v-7Z" class="play-mark" />
+          </svg>
+        </div>
+        <div>
+          <h1>课程播放助手</h1>
+          <p>resource.uestc.edu.cn</p>
+        </div>
+        <span class="local-badge">本地运行</span>
+      </header>
+
+      <section class="connection-card" aria-labelledby="connection-heading">
+        <div class="connection-heading">
+          <span id="status-dot" class="status-dot is-checking" aria-hidden="true"></span>
+          <div>
+            <h2 id="connection-heading">播放器状态</h2>
+            <p id="connection-status" role="status" aria-live="polite">正在检查课程页面…</p>
+          </div>
+        </div>
+        <p id="video-title" class="video-title" hidden></p>
+      </section>
+
+      <section class="control-section" aria-labelledby="speed-heading">
+        <div class="section-heading">
+          <div>
+            <h2 id="speed-heading">播放速度</h2>
+            <p>设置会自动记住</p>
+          </div>
+          <output id="speed-value" for="speed-options">1.0×</output>
+        </div>
+        <div id="speed-options" class="speed-options" role="group" aria-label="选择播放速度">
+          <button type="button" class="speed-button" data-speed="0.5" aria-pressed="false">0.5×</button>
+          <button type="button" class="speed-button" data-speed="0.75" aria-pressed="false">0.75×</button>
+          <button type="button" class="speed-button" data-speed="1" aria-pressed="true">1.0×</button>
+          <button type="button" class="speed-button" data-speed="1.25" aria-pressed="false">1.25×</button>
+          <button type="button" class="speed-button" data-speed="1.5" aria-pressed="false">1.5×</button>
+          <button type="button" class="speed-button" data-speed="1.75" aria-pressed="false">1.75×</button>
+          <button type="button" class="speed-button" data-speed="2" aria-pressed="false">2.0×</button>
+        </div>
+      </section>
+
+      <section class="auto-next-card" aria-labelledby="auto-next-heading">
+        <div class="auto-next-copy">
+          <h2 id="auto-next-heading">连续播放</h2>
+          <p>视频自然结束后，5 秒倒计时进入下一节；倒计时期间可在页面取消。</p>
+        </div>
+        <label class="switch" title="切换连续播放">
+          <input id="auto-next" type="checkbox" role="switch" />
+          <span class="switch-track" aria-hidden="true"><span class="switch-thumb"></span></span>
+          <span class="visually-hidden">启用连续播放</span>
+        </label>
+      </section>
+
+      <p id="settings-message" class="settings-message" aria-live="polite"></p>
+
+      <details class="shortcut-help">
+        <summary>快捷键</summary>
+        <dl>
+          <div><dt>Alt + Shift + .</dt><dd>提高倍速</dd></div>
+          <div><dt>Alt + Shift + ,</dt><dd>降低倍速</dd></div>
+          <div><dt>Alt + Shift + N</dt><dd>开关连续播放</dd></div>
+        </dl>
+      </details>
+
+      <footer>不会代答、伪造进度或绕过平台校验。</footer>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

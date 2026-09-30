@@ -1,0 +1,74 @@
+#uestc-playback-assistant-countdown,
+#uestc-playback-assistant-notice {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+  position: fixed;
+  z-index: 2147483647;
+  color: #f8fbff;
+  box-shadow: 0 18px 48px rgb(17 55 99 / 28%);
+}
+
+#uestc-playback-assistant-countdown {
+  right: 28px;
+  bottom: 28px;
+  width: min(330px, calc(100vw - 32px));
+  padding: 18px;
+  border: 1px solid rgb(255 255 255 / 24%);
+  border-radius: 14px;
+  background: linear-gradient(135deg, #2469db, #4a94f7);
+}
+
+.uestc-playback-assistant-countdown__title {
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.uestc-playback-assistant-countdown__body {
+  font-size: 14px;
+}
+
+.uestc-playback-assistant-countdown__body strong {
+  font-size: 22px;
+}
+
+.uestc-playback-assistant-countdown__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.uestc-playback-assistant-countdown__actions button {
+  padding: 7px 11px;
+  border-radius: 7px;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.uestc-playback-assistant-countdown__primary {
+  border: 1px solid #fff;
+  color: #1d5dbd;
+  background: #fff;
+  font-weight: 700;
+}
+
+.uestc-playback-assistant-countdown__cancel,
+.uestc-playback-assistant-countdown__disable {
+  margin-top: 0;
+  border: 1px solid rgb(255 255 255 / 64%);
+  color: #fff;
+  background: transparent;
+}
+
+#uestc-playback-assistant-notice {
+  right: 28px;
+  bottom: 28px;
+  max-width: min(350px, calc(100vw - 32px));
+  padding: 13px 16px;
+  border-radius: 10px;
+  background: rgb(25 39 58 / 94%);
+  font-size: 14px;
+  line-height: 1.45;
+}

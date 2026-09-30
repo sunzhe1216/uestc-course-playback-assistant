@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "成电课程播放助手",
+  "version": "1.0.2",
+  "description": "为 resource.uestc.edu.cn 的课程视频提供倍速和连续播放辅助。",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["https://resource.uestc.edu.cn/learn/course/detail/spoc/courseWare/*"],
+  "action": {
+    "default_title": "成电课程播放助手",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://resource.uestc.edu.cn/learn/course/detail/spoc/courseWare/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
