@@ -71,6 +71,12 @@ node --check background.js
 node --test tests\*.test.js
 ```
 
+## 发布包与隐私说明
+
+运行 `./scripts/package-extension.ps1` 可在 `dist/` 生成仅包含扩展运行文件和 MIT 许可的商店上传 ZIP。打包脚本不会覆盖同名旧包，`dist/` 不进入 Git 仓库。
+
+商店发布文案、权限理由和提交检查见 [CHROMEWEBSTORE.md](CHROMEWEBSTORE.md)，数据处理说明见 [PRIVACY.md](PRIVACY.md)。仓库或 ZIP 的版本号不等于 Chrome 商店已经发布的版本，商店状态以开发者后台为准。
+
 ## 许可证
 
 本项目以 [MIT 许可证](LICENSE)发布。
